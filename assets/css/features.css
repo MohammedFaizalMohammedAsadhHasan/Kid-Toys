@@ -1,0 +1,134 @@
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.products-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.product-search,
+.product-sort {
+    min-height: 48px;
+    border: 2px solid var(--light-gray);
+    border-radius: 30px;
+    padding: 0 18px;
+    font-size: 15px;
+    font-family: 'Comic Neue', cursive, sans-serif;
+    background-color: var(--white);
+    color: var(--dark);
+    transition: var(--transition);
+}
+
+.product-search {
+    flex: 1 1 280px;
+}
+
+.product-sort {
+    flex: 0 1 220px;
+    cursor: pointer;
+}
+
+.product-search:focus,
+.product-sort:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.15);
+}
+
+.favorites-toggle {
+    min-height: 48px;
+}
+
+.products-summary {
+    margin-bottom: 24px;
+    color: var(--gray);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.profile-help {
+    max-width: 540px;
+    margin: 0 auto 22px;
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.product-favorite {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--primary-light);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.product-favorite:hover,
+.product-favorite.active {
+    background-color: var(--primary);
+    color: var(--white);
+    transform: scale(1.08);
+}
+
+.products-empty {
+    grid-column: 1 / -1;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 48px 24px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.products-empty i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.products-empty h3 {
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.products-empty p {
+    color: var(--gray);
+}
+
+.is-disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .products-tools {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .product-search,
+    .product-sort,
+    .favorites-toggle {
+        width: 100%;
+    }
+}

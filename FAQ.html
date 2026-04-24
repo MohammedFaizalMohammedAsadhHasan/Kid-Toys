@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIDS TOYS - FAQs</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B6B; /* Vibrant coral */
+            --primary-light: #FF8E8E;
+            --primary-dark: #E05555;
+            --secondary: #4ECDC4; /* Fresh teal */
+            --accent: #FFD166; /* Sunny yellow */
+            --dark: #2D3436; /* Dark slate */
+            --light: #F7F9FC; /* Light background */
+            --white: #FFFFFF;
+            --gray: #636E72;
+            --light-gray: #DFE6E9;
+            --success: #06D6A0; /* Mint green */
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Neue', cursive, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            padding: 15px 0;
+            box-shadow: var(--box-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-family: 'Fredoka One', cursive;
+            font-size: 32px;
+            font-weight: 400;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--secondary);
+            font-size: 1.5em;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-size: 16px;
+            font-weight: 700;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav ul li a i {
+            margin-right: 5px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        nav ul li a.active {
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        .cart-info {
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: var(--light-gray);
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: var(--transition);
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .cart-info:hover {
+            background-color: var(--primary-light);
+            color: var(--white);
+        }
+        
+        .cart-info span {
+            margin-left: 10px;
+            font-size: 15px;
+        }
+        
+        .cart-count {
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            font-weight: bold;
+        }
+        
+        /* Hero Banner */
+        .hero-banner {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.1)" d="M0,0 L100,0 L100,100 L0,100 Z" /></svg>');
+            background-size: 100px 100px;
+            opacity: 0.2;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-banner h1 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            line-height: 1.2;
+        }
+        
+        .hero-banner p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Page Content */
+        .page-content {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 60px;
+        }
+        
+        .page-title {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .page-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 5px;
+            background-color: var(--secondary);
+            border-radius: 3px;
+        }
+        
+        /* FAQ Styles */
+        .faq-container {
+            margin-top: 30px;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .faq-question {
+            background-color: var(--primary-light);
+            color: var(--white);
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background-color: var(--primary);
+        }
+        
+        .faq-question i {
+            transition: var(--transition);
+        }
+        
+        .faq-answer {
+            background-color: var(--white);
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-answer-content {
+            padding: 20px 0;
+            line-height: 1.7;
+        }
+        
+        .faq-item.active .faq-question {
+            background-color: var(--primary);
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 0;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .testimonial-card::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 60px;
+            color: var(--primary-light);
+            opacity: 0.3;
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: var(--gray);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .author-info h4 {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        .testimonial-rating {
+            color: var(--accent);
+            margin-top: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 80px 0 30px;
+            position: relative;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+            color: var(--accent);
+            font-family: 'Fredoka One', cursive;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background-color: var(--primary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-column ul li a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+        
+        .footer-about p {
+            color: var(--light-gray);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-links a {
+            color: var(--white);
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            font-size: 20px;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        .payment-methods {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .payment-method {
+            width: 50px;
+            height: 30px;
+            background-color: var(--white);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-gray);
+            font-size: 14px;
+        }
+        
+        .footer-bottom a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            margin: 5% auto;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            animation: modalFadeIn 0.3s ease;
+            overflow: hidden;
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+            border-bottom: 1px solid var(--light-gray);
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .modal-header h2 {
+            color: var(--white);
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.8rem;
+        }
+        
+        .close-modal {
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .close-modal:hover {
+            color: var(--accent);
+            transform: rotate(90deg);
+        }
+        
+        .modal-body {
+            padding: 25px;
+        }
+        
+        .cart-items {
+            margin-bottom: 30px;
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .cart-item-info {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        
+        .cart-item-img {
+            width: 70px;
+            height: 70px;
+            background-color: var(--light-gray);
+            margin-right: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+        
+        .cart-item-details h4 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .cart-item-price {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+        }
+        
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            background-color: var(--light-gray);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+        
+        .quantity-btn:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+            margin: 0 10px;
+            padding: 5px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+        }
+        
+        .remove-item {
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.2rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .remove-item:hover {
+            color: var(--primary);
+            background-color: var(--light-gray);
+        }
+        
+        .cart-summary {
+            background-color: var(--light);
+            padding: 25px;
+            border-radius: 15px;
+        }
+        
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        
+        .cart-actions {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--primary);
+            padding: 15px 25px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+            transition: var(--transition);
+            text-decoration: none;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--dark);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .empty-cart-message {
+            text-align: center;
+            padding: 40px;
+            color: var(--gray);
+            font-size: 1.2rem;
+        }
+        
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--success);
+            color: var(--white);
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            animation: slideIn 0.3s ease;
+            max-width: 350px;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideOut {
+            from {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+        }
+        
+        .notification i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .hero-banner h1 {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-banner h1 {
+                font-size: 2.5rem;
+            }
+            
+            .page-title {
+                font-size: 2.3rem;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            nav ul {
+                margin-bottom: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .hero-banner {
+                padding: 60px 0;
+            }
+            
+            .hero-banner h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-banner p {
+                font-size: 1.1rem;
+            }
+            
+            .page-content {
+                padding: 30px 20px;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .modal-content {
+                width: 90%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-column h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .cart-item-quantity {
+                margin: 15px 0;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .remove-item {
+                align-self: flex-end;
+            }
+            
+            .cart-actions {
+                flex-direction: column;
+            }
+            
+            .hero-banner h1 {
+                font-size: 1.8rem;
+            }
+            
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            .faq-question {
+                padding: 15px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-child"></i> KIDS TOYS
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="Products.html"><i class="fas fa-box-open"></i> Products</a></li>
+                    <li><a href="Featured.html"><i class="fas fa-star"></i> Featured</a></li>
+                    <li><a href="About.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="FAQ.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="Cart.html"><i class="fas fa-cc-visa"></i>Payment</a></li>
+                    <li><a href="Contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="User-profile.html"><i class="fas fa-user"></i> User Profile</a></li>
+                </ul>
+            </nav>
+            <div class="cart-info" id="cart-toggle">
+                <i class="fas fa-shopping-cart"></i>
+                <span>cart</span>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-banner">
+            <div class="container hero-content">
+                <h1>Frequently Asked Questions</h1>
+                <p>Find answers to common questions about our products and services</p>
+            </div>
+        </section>
+        
+        <div class="container">
+            <section class="page-content">
+                <h2 class="page-title">FAQs</h2>
+                <div class="faq-container">
+                    <!-- FAQ items will be loaded by JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column footer-about">
+                    <h3>About Us</h3>
+                    <p>KIDS TOYS is dedicated to providing high-quality, safe, and fun toys for children of all ages. We believe in the power of play to inspire creativity and learning.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Toy Street, Playville</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@kidstoys.com</li>
+                    </ul>
+                    <div class="payment-methods">
+                        <div class="payment-method"><i class="fab fa-cc-visa"></i></div>
+                        <div class="payment-method"><i class="fab fa-cc-mastercard"></i></div>
+                        <div class="payment-method"><i class="fab fa-cc-paypal"></i></div>
+                        <div class="payment-method"><i class="fab fa-cc-apple-pay"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 KIDS TOYS. All Rights Reserved. | Designed by <a href="#">Your Company</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Your Shopping Cart</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="cart-items" id="cart-items">
+                    <p class="empty-cart-message">Your cart is empty. Start adding some toys!</p>
+                </div>
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span id="modal-cart-total">$0.00</span>
+                    </div>
+                    <div class="cart-actions">
+                        <a href="#" class="btn" id="continue-shopping">Continue Shopping</a>
+                        <a href="#" class="btn btn-primary" id="checkout-btn">Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/site-features.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Data
+            const faqs = [
+                {
+                    question: "What age range are your toys suitable for?",
+                    answer: "Our toys are designed for children aged 6 months to 12 years. Each product page clearly indicates the recommended age range to help you make the best choice for your child."
+                },
+                {
+                    question: "Are your toys safe for children?",
+                    answer: "Absolutely! Safety is our top priority. All our toys meet or exceed international safety standards, including ASTM F963 and EN71. They are made from non-toxic materials and are rigorously tested for quality and safety."
+                },
+                {
+                    question: "Do you offer international shipping?",
+                    answer: "Yes, we ship worldwide! Shipping costs and delivery times vary depending on your location. You'll see the exact shipping costs at checkout before you complete your purchase."
+                },
+                {
+                    question: "What is your return policy?",
+                    answer: "We offer a 30-day return policy for unused and unopened items. If you're not completely satisfied with your purchase, simply contact our customer service team to initiate a return. Some restrictions may apply."
+                },
+                {
+                    question: "How can I track my order?",
+                    answer: "Once your order has shipped, you'll receive a confirmation email with a tracking number and a link to track your package. You can also log in to your account on our website to view your order status."
+                },
+                {
+                    question: "What payment methods do you accept?",
+                    answer: "We accept all major credit cards (Visa, Mastercard, American Express), PayPal, Apple Pay, and Google Pay. All payments are processed securely through our encrypted payment gateway."
+                },
+                {
+                    question: "Do you offer gift wrapping?",
+                    answer: "Yes! We offer beautiful gift wrapping options for an additional fee. You can select this option during checkout and even include a personalized gift message."
+                },
+                {
+                    question: "How do I contact customer service?",
+                    answer: "Our customer service team is available 7 days a week. You can reach us by phone at (123) 456-7890, by email at support@kidstoys.com, or through the contact form on our website. We typically respond within 24 hours."
+                }
+            ];
+
+            // Initialize FAQ items
+            const faqContainer = document.querySelector('.faq-container');
+            
+            faqs.forEach((faq, index) => {
+                const faqItem = document.createElement('div');
+                faqItem.className = 'faq-item';
+                faqItem.innerHTML = `
+                    <div class="faq-question">
+                        <span>${faq.question}</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>${faq.answer}</p>
+                        </div>
+                    </div>
+                `;
+                faqContainer.appendChild(faqItem);
+                
+                // Add click event to toggle FAQ answer
+                const question = faqItem.querySelector('.faq-question');
+                question.addEventListener('click', function() {
+                    faqItem.classList.toggle('active');
+                });
+            });
+
+            // Cart functionality
+            const cart = {
+                items: [],
+                total: 0,
+                count: 0,
+                
+                addItem: function(product) {
+                    const existingItem = this.items.find(item => item.id === product.id);
+                    
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                    } else {
+                        this.items.push({
+                            id: product.id,
+                            name: product.name,
+                            price: product.price,
+                            image: product.image,
+                            color: product.color,
+                            quantity: 1
+                        });
+                    }
+                    
+                    this.total += product.price;
+                    this.count += 1;
+                    this.save();
+                    this.updateDisplay();
+                    this.showNotification(`${product.name} added to cart!`);
+                },
+                
+                removeItem: function(id) {
+                    const itemIndex = this.items.findIndex(item => item.id === id);
+                    if (itemIndex !== -1) {
+                        const item = this.items[itemIndex];
+                        this.total -= item.price * item.quantity;
+                        this.count -= item.quantity;
+                        this.items.splice(itemIndex, 1);
+                        this.save();
+                        this.updateDisplay();
+                        this.showNotification(`${item.name} removed from cart`);
+                    }
+                },
+                
+                updateQuantity: function(id, newQuantity) {
+                    const item = this.items.find(item => item.id === id);
+                    if (item && newQuantity > 0) {
+                        this.total -= item.price * item.quantity;
+                        this.count -= item.quantity;
+                        
+                        item.quantity = newQuantity;
+                        
+                        this.total += item.price * item.quantity;
+                        this.count += item.quantity;
+                        this.save();
+                        this.updateDisplay();
+                    } else if (item && newQuantity <= 0) {
+                        this.removeItem(id);
+                    }
+                },
+                
+                save: function() {
+                    localStorage.setItem('cart', JSON.stringify({
+                        items: this.items,
+                        total: this.total,
+                        count: this.count
+                    }));
+                },
+                
+                load: function() {
+                    const savedCart = localStorage.getItem('cart');
+                    if (savedCart) {
+                        const cartData = JSON.parse(savedCart);
+                        this.items = cartData.items || [];
+                        this.total = cartData.total || 0;
+                        this.count = cartData.count || 0;
+                        this.updateDisplay();
+                    }
+                },
+                
+                updateDisplay: function() {
+                    document.getElementById('cart-total').textContent = `$${this.total.toFixed(0)}`;
+                    document.getElementById('cart-count').textContent = this.count;
+                    document.getElementById('modal-cart-total').textContent = `$${this.total.toFixed(0)}`;
+                    
+                    // Update modal cart items
+                    const cartItemsContainer = document.getElementById('cart-items');
+                    if (this.items.length === 0) {
+                        cartItemsContainer.innerHTML = '<p class="empty-cart-message">Your cart is empty. Start adding some toys!</p>';
+                    } else {
+                        cartItemsContainer.innerHTML = this.items.map(item => `
+                            <div class="cart-item" data-id="${item.id}">
+                                <div class="cart-item-info">
+                                    <div class="cart-item-img" style="background-color: ${item.color}20; color: ${item.color}">
+                                        ${item.image}
+                                    </div>
+                                    <div class="cart-item-details">
+                                        <h4>${item.name}</h4>
+                                        <div class="cart-item-price">$${item.price.toFixed(0)}</div>
+                                    </div>
+                                </div>
+                                <div class="cart-item-quantity">
+                                    <button class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="${item.quantity}" min="1">
+                                    <button class="quantity-btn plus">+</button>
+                                </div>
+                                <div class="remove-item"><i class="fas fa-trash"></i></div>
+                            </div>
+                        `).join('');
+                        
+                        // Add event listeners to quantity buttons
+                        document.querySelectorAll('.quantity-btn.minus').forEach(button => {
+                            button.addEventListener('click', function() {
+                                const itemId = parseInt(this.closest('.cart-item').getAttribute('data-id'));
+                                const input = this.nextElementSibling;
+                                const newQuantity = parseInt(input.value) - 1;
+                                input.value = newQuantity;
+                                cart.updateQuantity(itemId, newQuantity);
+                            });
+                        });
+                        
+                        document.querySelectorAll('.quantity-btn.plus').forEach(button => {
+                            button.addEventListener('click', function() {
+                                const itemId = parseInt(this.closest('.cart-item').getAttribute('data-id'));
+                                const input = this.previousElementSibling;
+                                const newQuantity = parseInt(input.value) + 1;
+                                input.value = newQuantity;
+                                cart.updateQuantity(itemId, newQuantity);
+                            });
+                        });
+                        
+                        document.querySelectorAll('.quantity-input').forEach(input => {
+                            input.addEventListener('change', function() {
+                                const itemId = parseInt(this.closest('.cart-item').getAttribute('data-id'));
+                                const newQuantity = parseInt(this.value);
+                                cart.updateQuantity(itemId, newQuantity);
+                            });
+                        });
+                        
+                        document.querySelectorAll('.remove-item').forEach(button => {
+                            button.addEventListener('click', function() {
+                                const itemId = parseInt(this.closest('.cart-item').getAttribute('data-id'));
+                                cart.removeItem(itemId);
+                            });
+                        });
+                    }
+                },
+                
+                showNotification: function(message) {
+                    const notification = document.createElement('div');
+                    notification.className = 'notification';
+                    notification.innerHTML = `
+                        <i class="fas fa-check-circle"></i>
+                        <span>${message}</span>
+                    `;
+                    
+                    document.body.appendChild(notification);
+                    
+                    setTimeout(() => {
+                        notification.style.animation = 'slideOut 0.3s ease';
+                        setTimeout(() => {
+                            document.body.removeChild(notification);
+                        }, 300);
+                    }, 3000);
+                },
+                
+                clear: function() {
+                    this.items = [];
+                    this.total = 0;
+                    this.count = 0;
+                    this.save();
+                    this.updateDisplay();
+                }
+            };
+            
+            // Modal functionality
+            const modal = document.getElementById('cart-modal');
+            const cartToggle = document.getElementById('cart-toggle');
+            const closeModal = document.querySelector('.close-modal');
+            const continueShopping = document.getElementById('continue-shopping');
+            const checkoutBtn = document.getElementById('checkout-btn');
+            
+            cartToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+            
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            continueShopping.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            checkoutBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                cart.showNotification(`Proceeding to checkout with $${cart.total.toFixed(0)} total`);
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 1000);
+            });
+            
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Initialize cart
+            cart.load();
+        });
+    </script>
+</body>
+</html>
